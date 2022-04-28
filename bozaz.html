@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            width: 90%;
+            
+            margin: auto;
+        }
+        .container>div:nth-child(){
+            width: 80%;
+            margin: auto;
+            background-color:whitesmoke;
+        }
+        body{
+           background-color: white;
+        }
+
+        input,select{
+            display: block;
+          width: 80%;
+            padding: 8px;
+            margin: 10px auto;
+            padding: 1% 5px;
+        }
+        h1{
+            text-align: center;
+        }
+        .container>div:nth-child(2){
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #products>div{
+            width: 18%;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>Add some products</h1>
+        <form id="form">
+    <select name="" id="category">
+    
+    
+      <option value="electronics">Electronics</option>
+        <option value="furniture">Furniture</option>
+        <option value="home">Home</option>
+        <option value="appliance">Appliance</option>
+        <option value="books">Books</option>
+    </select>   
+    <input id="title" type="text">
+    <input id="desc" type="text">   
+    <input id="price" type="number"> 
+    <input type="submit">     
+            </form>
+        </div>
+        <div id="products">
+
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    // dom variables
+    // var form=document.getElementById("form");
+    var form = document.querySelector("#form")
+    var products= document.querySelector("#products")
+
+    function display(data){
+        var parent=document.createElement("div");
+
+        var heading=document.createElement("h2")
+          heading.textContent=data.category
+           var title=document.createElement("p")
+                  title.innerText=data.title
+
+                  var desc=document.createElement("p")
+                  desc.innerText=data.desc
+
+                  var price=document.createElement("p")
+                  price.innerText=data.price
+
+                  var btn=document.createElement("button")
+                  btn.innerText="REMOVE";
+                  btn.style.backgroundcolor = "red"
+                  btn.style.cursor="pointer"
+                  btn.addEventListener("click",function(event){
+                    parent.remove();
+                  })
+
+                  parent.append(heading,title,desc,price,btn)
+
+    products.append(parent);
+
+    }
+
+
+
+    form.addEventListener("submit",function(event){
+        event.preventDefault();
+
+var data={
+    title:form.title.value,
+    desc:form.desc.value,
+    price:form.price.value,
+    category:form.category.value,
+}
+display(data);
+console.log(data);
+
+    })
+    </script>

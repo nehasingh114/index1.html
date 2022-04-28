@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="gender">
+        <option value="">--</option>
+		<option value="male">M</option>
+		<option value="female">F</option>
+    </select>
+    <input type="number" name="age" id="main">
+    
+    <button onclick="checkvalidity()">Submit</button>
+    <p id="result">show result</p>
+</body>
+</html>
+<script>
+    // var gender = document.getElementById("gender")
+    function checkvalidity(){
+        if(document.getElementById("gender").value == "male" && document.getElementById("main").value>=21){
+            document.getElementById("result").innerText="valid legal age to get married"
+        }
+        else if(document.getElementById("gender").value == "male" && document.getElementById("main").value<21){
+            document.getElementById("result").innerText="Not valid legal age to get married"
+        }
+        else if(document.getElementById("gender").value == "female" && document.getElementById("main").value>=21){
+            document.getElementById("result").innerText="valid legal age to get married"
+        }
+        else if(document.getElementById("gender").value == "female" && document.getElementById("main").value<21){
+            document.getElementById("result").innerText="Not valid legal age to get married"
+        }
+     
+    }
+
+</script>

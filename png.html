@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navbar{
+            width: 90vw;
+            height: 15vh;
+            /* border: 2px solid red; */
+            margin: 25px;
+            background-color: blueviolet;
+            font-size: xx-large;
+            text-align: center;
+            padding-top: 40px;
+
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4,250px);
+        grid-template-rows: repeat(1,250px);
+        gap: 5px;
+        justify-content: center;
+        /* width: 90vw;
+            height: 80vh;
+        /* border: 2px solid yellow; */
+        /* display: flex;
+        margin: 25px;
+        background-color: aqua; */ 
+
+    }
+    .container>div{
+        box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+        font-size: xx-large;
+        text-align: center; 
+        margin: 15px;
+    }
+   
+     .box1{
+       background-color: red;
+     }   
+     .box2{
+       background-color: greenyellow;
+     } 
+     .box3{
+       background-color:rgb(94, 152, 199);
+     }   
+     .box4{
+       background-color: rgb(70, 91, 8);
+     }     
+          
+    /* .box2{
+        width: 250px;
+            height: 250px;
+        border: 2px solid green;
+        margin: 15px;
+        background-color: yellow;
+        font-size: xx-large;
+        text-align: center; */ 
+
+/* 
+    }
+    .box3{
+        width: 250px;
+            height: 250px;
+        border: 2px solid green;
+        margin: 15px;
+        background-color: pink;
+        font-size: xx-large;
+        text-align: center; */
+
+
+    /* }
+    .box4{
+        width: 250px;
+            height: 250px;
+        border: 2px solid green;
+        margin: 15px;
+        font-size: xx-large;
+        background-color: rgb(241, 123, 143);
+        text-align: center; */ 
+
+
+    
+   
+
+    
+
+    @media all and (min-width:451px) and (max-width:750px) {
+        .container{
+        grid-template-columns: repeat(2,200px);
+        grid-template-rows: repeat(1,100px);
+        /* grid-template-areas: ;
+        */
+        }
+    }
+    @media all and (min-width:100px) and (max-width:450px) {
+        .container{
+      
+        grid-template-columns: repeat(1,200px);
+        grid-template-rows: repeat(2,100px);
+             }
+            }
+    </style>
+</head>
+<body>
+    
+
+    <nav>
+        <div class="navbar">Navigation</div>
+    </nav>
+    <div class="container">
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+    <div class="box4">box4</div>
+</div>
+</body>
+</html>

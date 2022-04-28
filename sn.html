@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+         text-align: center;
+         font-size: 30px;
+         color: teal;
+        }
+        #neha{
+            height: 450px;
+            width: 350px;
+            box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+            margin: auto;
+        border-radius: 15px;
+        padding: 20px;
+        }
+        #display{
+
+            height: 60px;
+            width: 85%;
+            box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+            border-radius: 15px;
+            margin: auto;
+        
+        
+        }
+            #keyboard{
+                box-shadow: rgba(14, 1, 22, 0.25) 0px 6px 12px -2px;
+                 
+display: grid;
+grid-template-columns: repeat(4,1fr);
+grid-template-rows: repeat(4,90px);
+gap: 10px;
+margin-top: 15px;
+font-size: 25px;
+font-weight: bold;
+align-items: center;
+justify-content: center; 
+
+
+
+            }
+
+  .red{
+     background-color: red; 
+     color: white;
+
+  }        
+  .black{
+    background-color: black; 
+     color:white;    
+  }  
+            #keyboard > div{
+                box-shadow: #0f0e0e8e 0px 5px 15px;;
+                padding: 20px;
+                border-radius: 10px;
+            }
+        
+    </style>
+</head>
+<body>
+    <h1>Masai calculator</h1>
+    <div id="neha">
+        <div id="display"></div>
+        <div id="keyboard">
+            <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div class="black">+</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div class="black">-</div>
+  <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div class="black">X</div>
+        <div class="red">C</div>
+        <div class="black">0</div>
+        <div class="black">=</div>
+        <div class="black">/</div>
+        </div>
+        
+
+    </div>
+</body>
+</html>

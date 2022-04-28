@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+           display: grid;
+           grid-template-columns: repeat(4 ,1fr);
+           grid-template-rows: 400px;
+           gap: 20px;
+         /* justify-content: center; */
+         /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+  
+        }
+         p+img{
+            height: 50px;
+      
+            }
+     
+            </style>
+</head>
+<body>
+    <h1>Frontend</h1>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+    var investorsArr = JSON.parse(localStorage.getItem("investorData"))
+    console.log(investorsArr);
+
+    
+
+
+
+        
+    investorsArr.forEach(function(elem){
+    console.log(elem)
+    
+var box = document.createElement("div");
+
+
+var investor_avatar=document.createElement("img")
+investor_avatar.setAttribute("src",elem.investorImage)
+
+
+var investor_name=document.createElement("h3")
+investor_name.innerText=elem.investorName
+
+
+var investor_position=document.createElement("p")
+investor_position.innerText=elem.investorRole
+
+
+var investor_logo=document.createElement("img")
+investor_logo.setAttribute("src",elem.investorConmpanyLogo)
+
+
+box.append(investor_avatar,investor_name,investor_position,investor_logo)
+
+   document.querySelector("#container").append(box)
+
+})
+    investorsArr.forEach(function(elem){
+    console.log(elem)
+    
+var box = document.createElement("div");
+
+
+var investor_avatar=document.createElement("img")
+investor_avatar.setAttribute("src",elem.investorImage)
+
+
+var investor_name=document.createElement("h3")
+investor_name.innerText=elem.investorName
+
+
+var investor_position=document.createElement("p")
+investor_position.innerText=elem.investorRole
+
+
+var investor_logo=document.createElement("img")
+investor_logo.setAttribute("src",elem.investorConmpanyLogo)
+
+
+box.append(investor_avatar,investor_name,investor_position,investor_logo)
+
+   document.querySelector("#container").append(box)
+
+})
+</script>

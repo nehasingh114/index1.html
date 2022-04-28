@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+      .container{
+        
+        width: 40%;
+        margin: auto;
+        height: 150px;
+        text-align: center;
+      
+      }
+      .container>p{
+          line-height: 21px;
+          font-style: calc();
+          color: rgb(114, 111, 111);
+      }
+      
+      .container h1{
+    font-style: calc();
+      }
+#container{
+    display: grid;
+    grid-template-columns: repeat(3,270px);
+    grid-template-rows: repeat(1,350px);
+    gap: 40px;
+    justify-content: center;
+    margin: 40px;
+    
+}
+#container>div{
+    
+    text-align: center;
+    box-shadow: #adacac8e 0px 5px 15px;;
+    
+    
+}
+
+#container>div>h1{
+    font-style: calc();
+    font-weight: bold;
+    color: green;
+}
+
+
+
+ /* div>neha{
+    margin-top: 10px;
+font-style: calc();
+color: rgb(181, 182, 185);
+} */
+button{
+    width: 50%;
+    margin: 20px;
+    padding: 15px;
+    color: rgb(8, 103, 154);
+    border-radius: 3px;
+}
+#container>div>p{
+    margin-top: 10px;
+font-style: calc();
+color: rgb(95, 96, 99);
+}
+
+ 
+button:hover{
+    cursor: pointer;
+    color: white;
+    background-color: rgb(0, 64, 255);
+}
+
+@media all and (min-width:451px) and (max-width:751px){
+    #container{
+        grid-template-columns: repeat(2,270px);
+        
+        background-color: green;
+    }
+    .container{
+        
+        width: 40%;
+        margin: auto;
+        height: 150px;
+        text-align: center;
+      
+      }
+      .container p{
+          line-height: 21px;
+          font-style: calc();
+          color: rgb(114, 111, 111);
+      }
+      
+}
+
+@media all and (min-width:100px) and (max-width:450px){
+    #container{
+        grid-template-columns: repeat(1,270px);
+        /* background-color: yellow; */
+    }
+    .container{
+        
+        width: 40%;
+        margin: auto;
+        height: 150px;
+        text-align: center;
+      
+      }
+      .container p{
+          line-height: 21px;
+          font-style: calc();
+          color: rgb(114, 111, 111);
+      }
+      
+}
+
+  </style>
+</head>
+<body>
+   <div class="container">
+       <h1>Choose a plan that right for your business.</h1>
+       <p>We collect revenues from ousr users so u can get an honrst opinion what an<br>
+    experience with wor websites are really like!</p>
+
+  
+   </div> 
+   <div id="container">
+       <div>
+           <h3>Starter Plan</h3>
+           <h1>Free</h1>
+           <p class="p1">Per month</p>
+           <p class="neha">We collect revenurs frm our<br>
+            users so u can get an honest<br>
+        opinion of what an experience<br>
+        with pour website.</p>
+    <button>Start Now</button>
+       </div>
+       <div>
+        <h3>Business Plan</h3>
+        <h1>$39.00</h1>
+        <p class="p1">Per month</p>
+        <p class="neha">We collect revenurs frm our<br>
+         users so u can get an honest<br>
+     opinion of what an experience<br>
+     with pour website.</p>
+ <button>Start Now</button>
+       </div>
+       <div>
+        <h3>Premium Plan</h3>
+        <h1>$59.00</h1>
+        <p class="p1">Per month</p>
+        <p class="neha">We collect revenurs frm our<br>
+         users so u can get an honest<br>
+     opinion of what an experience<br>
+     with pour website.</p>
+ <button>Start Now</button>
+       </div>
+   </div>
+</body>
+</html>

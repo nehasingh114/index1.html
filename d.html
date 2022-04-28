@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>U2C3 Mock</title>
+
+</head>
+
+<body>
+  <form>
+    <select id="month">
+      <option value="January">JANUARY</option>
+      <option value="February">FEB</option>
+      <option value="MARCH">MARCH</option>
+      <option value="APRIL">APRIL</option>
+      <option value="MAY">MAY</option>
+      <option value="JUNE">JUNE</option>
+      <option value="JULY">JULY</option>
+      <option value="AUGUST">AUGUST</option>
+      <option value="SEPETEMBER">SEPETEMBER</option>
+      <option value="OCTOBER">OCTOBER</option>
+      <option value="NOVEMBER">NOVEMBER</option>
+      <option value="DECEMBER">DECEMBER</option>
+    </select>
+
+    <input id="income" type="number" placeholder="Enter Income" />
+
+    <input id="expense" type="number" placeholder="Enter expense" />
+
+    <input type="submit" />
+  </form>
+
+  <div id="report">
+    <!-- Append your cards here -->
+
+  </div>
+</body>
+
+</html>
+
+<script>
+  document.querySelector("form").addEventListener("submit", input)
+  // var report = document.querySelector("#report").append(div)
+
+  function input() {
+    event.preventDefault();
+
+    var month = document.querySelector("#month").value
+
+   
+    var income = document.querySelector("#income").value
+    console.log(income)
+
+    var expense = document.querySelector("#expense").value
+    console.log(expense)
+
+
+    var divs = document.createElement("div");
+    // console.log(div)
+    divs.setAttribute("id", "reports")
+
+    var head = document.createElement("h1");
+    head.innerText = month;
+
+
+    var para = document.createElement("p");
+    para.innerText=income
+
+
+    var para1 = document.createElement("p");
+    para1.innerText=expense
+
+    var head3 = document.createElement("h3");
+   
+    
+
+    if(income<expense){
+      head3.innerText="DEBT";
+      head3.style.color="red"
+    }
+    if(income>expense){
+      head3.innerText="SAVE";
+      head3.style.color="green"
+    }
+    if(income == expense){
+      head3.innerText="BREAKEVEN";
+      head3.style.color="orange"
+
+    }
+
+
+    var btn = document.createElement("button");
+    btn.innerText="DELETE"
+    btn.addEventListener("click",dele);
+    function dele(){
+      event.target.parentNode.remove();
+    }
+
+
+
+    divs.append(head,para,para1,head3,btn);
+    document.querySelector("#report").append(divs);
+  }
+
+
+</script>

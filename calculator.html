@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        h1{
+         text-align: center;
+         font-size: 40px;
+         color: teal;
+       font-style: italic;
+        }
+        #outer{
+            height: 450px;
+            width: 350px;
+            box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+            margin: auto;
+        border-radius: 15px;
+        padding: 20px;
+        }
+        .neha{
+
+            height: 60px;
+            width: 85%;
+            box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+            border-radius: 15px;
+            margin: auto;
+        
+        
+        }
+            .inner{
+                box-shadow: rgba(14, 1, 22, 0.25) 0px 6px 12px -2px;
+                 
+display: grid;
+grid-template-columns: repeat(4,1fr);
+grid-template-rows: repeat(4,90px);
+gap: 10px;
+margin-top: 15px;
+font-size: 25px;
+font-weight: bold;
+align-items: center;
+justify-content: center; 
+
+
+
+            }
+            .inner>div:hover{
+                background-color:gray;
+                cursor: pointer;
+            }
+
+  .red{
+     background-color: red; 
+     color: white;
+
+  }        
+  .black{
+    background-color: black; 
+     color:white;    
+  }  
+            .inner > div{
+                box-shadow: #0f0e0e8e 0px 5px 15px;
+                padding: 20px;
+                border-radius: 10px;
+            }
+
+            .neha{
+        text-align: center;
+        justify-content: center;
+        font-size: 30px;
+padding-top: 10px;
+font-weight: bold;
+
+    }
+        
+    </style>
+</head>
+<body>
+    <h1>Masai calculator</h1>
+    <div id="outer">
+        <div class="neha"></div>
+        <div class="inner">
+            <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div class="black">+</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div class="black">-</div>
+  <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div class="black">*</div>
+        <div class="red">C</div>
+        <div>0</div>
+        <div class="black">=</div>
+        <div class="black">/</div>
+        </div>
+        
+
+    </div>
+</body>
+</html>
+
+
+<script>
+    var keys = document.querySelectorAll(".inner>div")
+    var bag = "";
+
+for(var i=0;i<keys.length;i++){
+    keys[i].addEventListener("click",myCalculator)
+}
+function myCalculator(){
+var targetNumber =event.target.innerText;
+
+if(targetNumber=="C"){
+    bag = "";
+    document.querySelector(".neha").innerText="";
+}
+else if (targetNumber=="="){
+    console.log(eval(bag))
+    document.querySelector(".neha").innerText= eval(bag);
+
+}
+else{
+    bag = bag +targetNumber
+    document.querySelector(".neha").innerText= bag;
+
+}
+}
+</script>

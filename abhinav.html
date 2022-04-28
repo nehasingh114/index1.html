@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="commom.css"/> -->
+    <style>
+        #navbar{
+            justify-content: space-between;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+       <div><a href="frondend.html">Backend</a></div>
+       <div><a href="backend.html">Frontend</a></div>
+    </div>
+    <form id="investorForm">
+        <input id="imageURL" type="text" placeholder="Enter Image URL">
+        <input id="name" type="text" placeholder="Enter investor name">
+        <input id="role" type="text" placeholder="Enter investor role">
+        <input id="companyLogo" type="text" placeholder="Enter company logo">
+        <input type="submit"/>
+
+    </form>
+</body>
+</html>
+
+
+<script>
+    // image , name , role , companyLogo
+    document
+    .querySelector("#investorForm")
+    .addEventListener("submit",investorsFun);
+    
+    // now i want to stort in fromif array of objects
+
+    var investorArr = []
+
+    // first we need array
+    // we need objest of  <input type="text" placeholder="Enter Image URL">
+        // <input type="text" placeholder="Enter investor name">
+        // <input type="text" placeholder="Enter investor role">
+        // <input type="text" placeholder="Enter company logo">
+        // <input type="Submit"/>
+
+        //  all this things
+
+         function investorsFun(){
+             event.preventDefault();
+
+             var investorObj = {
+                investorImage:document.querySelector("#imageURL").value,
+                 investorName:document.querySelector("#name").value,
+                 investorRole:document.querySelector("#role").value,
+                 investorConmpanyLogo:document.querySelector("#companyLogo").value,
+             };
+            investorArr.push(investorObj);
+            console.log(investorArr);
+            localStorage.setItem("investorData",JSON.stringify(investorArr))
+
+
+    }
+
+</script>

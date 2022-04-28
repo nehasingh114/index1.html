@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ #head{
+     font-size: 20px;
+     color: cornflowerblue;
+     font-style: oblique;
+     text-align: center;
+
+ }
+ #outer{
+     /* border: 2px solid black; */
+     height: 350px;
+     width: 30%;
+     margin: auto;
+     margin-top: 30px;
+     background-color: white;
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+     margin-bottom: 50px;
+
+
+ }
+ .neha{
+    height: 60px;
+     width: 70%;
+     /* border: 1px solid black; */
+     background-color: rgb(182, 208, 231);
+     margin: auto;
+     margin-top: 15px;
+     border-radius:10px;
+     margin-bottom: 10px;
+     margin-right: 50px;
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+     
+ }
+ .inner{
+     height: 35px;
+     width: 80%;
+     /* border: 1px solid black; */
+     margin: auto;
+     margin-top: 15px;
+     margin-bottom: 15px;
+     padding: 6px 2px 6px 2px;
+     display: flex;
+     border-radius: 10px;
+     margin-right: 14px;
+     
+ }
+ .box{
+     height: 50px;
+     width: 20%;
+     /* border: 1px solid rgb(255, 0, 0); */
+     background-color: rgb(182, 208, 231);
+     margin-top: -11px;
+     margin-left: 8px;
+     border-radius: 10px;    
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   
+     }
+
+     h1{
+         margin: auto;
+         /* padding: auto; */
+       text-align: center;
+       /* font-size: 70px; */
+     }
+     .black{
+         background-color: black;
+         color: white;
+         height: 51px;
+         width: 100%;
+         border-radius: 10px;
+     }
+    .red{
+        background-color: rgb(255, 0, 0);
+         color: white;
+         height: 51px;
+         width: 100%;
+         border-radius: 10px;
+    }
+    .neha{
+        text-align: center;
+        justify-content: center;
+        font-size: 30px;
+    }
+    
+    </style>
+</head>
+<body>
+    <div id="head"><h1>Masai Calculator</h1></div>
+    <div id="outer">
+        <div class="neha"></div>
+        <div class="inner">
+            <div class="box"><h1>1</h1></div>
+            <div class="box"><h1>2</h1></div>
+            <div class="box"><h1>3</h1></div>
+            <div class="box"><h1 class="black">+</h1></div>
+        </div>
+        <div class="inner">
+            <div class="box"><h1>4</h1></div>
+            <div class="box"><h1>5</h1></div>
+            <div class="box"><h1>6</h1></div>
+            <div class="box"><h1 class="black">-</h1></div>
+        </div>
+        <div class="inner">
+            <div class="box"><h1>7</h1></div>
+            <div class="box"><h1>8</h1></div>
+            <div class="box"><h1>9</h1></div>
+            <div class="box"><h1 class="black">*</h1></div>
+        </div>
+        <div class="inner">
+            <div class="box"> <h1 class="red">C</h1></div>
+            <div class="box"><h1>0</h1></div>
+            <div class="box"><h1 class="black">=</h1></div>
+            <div class="box"><h1 class="black">/</h1></div>
+        </div>
+     </div>
+</body>
+</html>
+
+
+<script>
+    var keys = document.querySelectorAll(".inner>div")
+    var bag = "";
+
+for(var i=0;i<keys.length;i++){
+    keys[i].addEventListener("click",myCalculator)
+}
+function myCalculator(){
+var targetNumber =event.target.innerText;
+
+if(targetNumber=="C"){
+    bag = "";
+    document.querySelector(".neha").innerText="";
+}
+else if (targetNumber=="="){
+    console.log(eval(bag))
+    document.querySelector(".neha").innerText= eval(bag);
+
+}
+else{
+    bag = bag +targetNumber
+    document.querySelector(".neha").innerText= bag;
+
+}
+}
+</script>

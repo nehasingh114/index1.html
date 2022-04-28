@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            /* border: 1px solid blue; */
+            width: 90%;
+            display: grid;
+            grid-template-columns: repeat(9,1fr);
+            grid-template-rows: 35px;
+            grid-gap: 1px;
+            margin: auto;
+        }
+        #main>div{
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: space-evenly;
+            margin: auto;
+            height: 95%;
+            align-items: center;
+            border-radius: 5px;
+            padding: 20px;
+            font-weight: 600;
+            font-size: 20px;
+        }
+        #main>div:nth-child(1){
+            background-color: rgb(12, 101, 137);
+            color: white;
+        }
+        #main>div:nth-child(2){
+            background-color:grey;
+            color: white;
+        }
+        #main>div:nth-child(3){
+            background-color: green;
+            color: white;
+        }
+        #main>div:nth-child(4){
+            background-color: red;
+            color: white;
+        }
+        #main>div:nth-child(5){
+            background-color:darkgoldenrod;
+            
+        }
+        #main>div:nth-child(6){
+            background-color: rgb(24, 72, 91);
+            color: white;
+        }
+        #main>div:nth-child(7){
+            background-color: rgb(249, 237, 237);
+            
+        }
+        #main>div:nth-child(8){
+            background-color: black;
+            color: white;
+        }
+        #main>div:nth-child(9){
+            background-color: white;
+            color: blue;
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div>Primary</div>
+        <div>Secondary</div>
+        <div>Success</div>
+        <div>Danger</div>
+        <div>Warning</div>
+        <div>Info</div>
+        <div>Light</div>
+        <div>Dark</div>
+        <div>Link</div>
+    </div>
+</body>
+</html>
+<script>
+    for(var i=0; i<9; i++){
+var button = document.createElement("div")
+    }
+
+
+</script>
